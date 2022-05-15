@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 public class DetailProduct extends AppCompatActivity {
-    TextView tenSanPham,giaTien,moTaa,txtSoLuong;
+    TextView tenSanPham,giaTien,moTaa,txtSoLuong,txtDanhGia;
     ImageView img1,img2,img3,img4,imgReudece,imgIncrease;
     Context ctx;
     Button btn39,btn40,btn41,btn42,btn43,btnMuaNgay;
@@ -31,6 +31,7 @@ public class DetailProduct extends AppCompatActivity {
         String hinh2 = intent.getStringExtra("hinh2");
         String hinh3 = intent.getStringExtra("hinh3");
         String hinh4 = intent.getStringExtra("hinh4");
+        String danhGia = intent.getStringExtra("danhGia");
 
 
         khaiBao();
@@ -38,6 +39,7 @@ public class DetailProduct extends AppCompatActivity {
 
         moTaa.setText(moTa);
         giaTien.setText(giaThanh);
+        txtDanhGia.setText(danhGia);
 
         Picasso.with(ctx).load(hinh1).into(img1);
         Picasso.with(ctx).load(hinh2).into(img2);
@@ -180,6 +182,7 @@ public class DetailProduct extends AppCompatActivity {
          imgIncrease = findViewById(R.id.imgIncrease);
          imgReudece = findViewById(R.id.imgReduce);
          txtSoLuong = findViewById(R.id.txtSoLuong);
+         txtDanhGia = findViewById(R.id.txtDanhGia);
 
     }
 

@@ -59,6 +59,7 @@ public class SanPhamAdapter extends BaseAdapter {
 
         TextView txtTenSP = view.findViewById(R.id.txtTenSP);
         TextView txtdonGia = view.findViewById(R.id.txtdonGia);
+
         ImageView img = view.findViewById(R.id.imgShoes);
         ConstraintLayout con1 = view.findViewById(R.id.cons1);
         ConstraintLayout con2 = view.findViewById(R.id.cons2);
@@ -74,8 +75,10 @@ public class SanPhamAdapter extends BaseAdapter {
 
         txtdonGia.setText(""+list.get(i).getGiaTien());
         txtTenSP.setText(list.get(i).getTenSanPham());
+//        txtDanhGia.setText(list.get(i).getDanhGia());
 //        img.setImageResource(list.get(i).getHinh1());
         Picasso.with(ctx).load(list.get(i).getHinh1()).into(img);
+
 
 
 

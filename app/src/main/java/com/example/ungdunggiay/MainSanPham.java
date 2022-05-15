@@ -60,6 +60,7 @@ public class MainSanPham extends AppCompatActivity {
                 intent.putExtra("hinh2",list.get(i).getHinh2());
                 intent.putExtra("hinh3",list.get(i).getHinh3());
                 intent.putExtra("hinh4",list.get(i).getHinh4());
+                intent.putExtra("danhGia",list.get(i).getDanhGia());
 
                 startActivity(intent);
             }

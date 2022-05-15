@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thong_tin_ca_nhan);
+        setContentView(R.layout.activity_main);
 //
-//        khaiBao();
-//        openFormRegister();
-//        login();
+        khaiBao();
+        openFormRegister();
+        login();
 
 
 

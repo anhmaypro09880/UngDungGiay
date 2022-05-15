@@ -8,10 +8,24 @@ public class SanPham {
     private String size;
     private String hinh1;
     private String hinh2;
+    private String danhGia;
     private String hinh3;
     private String hinh4;
 
     public SanPham() {
+    }
+
+    public SanPham(String id, String tenSanPham, String moTa, String giaTien, String size, String hinh1, String hinh2, String danhGia, String hinh3, String hinh4) {
+        this.id = id;
+        this.tenSanPham = tenSanPham;
+        this.moTa = moTa;
+        this.giaTien = giaTien;
+        this.size = size;
+        this.hinh1 = hinh1;
+        this.hinh2 = hinh2;
+        this.danhGia = danhGia;
+        this.hinh3 = hinh3;
+        this.hinh4 = hinh4;
     }
 
     public SanPham(String id, String tenSanPham, String moTa, String giaTien, String size, String hinh1, String hinh2, String hinh3, String hinh4) {
@@ -96,5 +110,13 @@ public class SanPham {
 
     public void setHinh4(String hinh4) {
         this.hinh4 = hinh4;
+    }
+
+    public String getDanhGia() {
+        return danhGia;
+    }
+
+    public void setDanhGia(String danhGia) {
+        this.danhGia = danhGia;
     }
 }
