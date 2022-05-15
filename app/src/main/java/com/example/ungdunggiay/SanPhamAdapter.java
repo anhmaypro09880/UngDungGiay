@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -27,12 +29,7 @@ public class SanPhamAdapter extends BaseAdapter {
 
     }
 
-    public SanPhamAdapter(Context ctx, int layout, ArrayList<SanPham> list, IClickLisner clickLisner) {
-        this.ctx = ctx;
-        this.layout = layout;
-        this.list = list;
-        this.clickLisner = clickLisner;
-    }
+
 
     public SanPhamAdapter(Context ctx, int layout, ArrayList<SanPham> list) {
         this.ctx = ctx;
@@ -62,14 +59,11 @@ public class SanPhamAdapter extends BaseAdapter {
         TextView txtTenSP = view.findViewById(R.id.txtTenSP);
         TextView txtdonGia = view.findViewById(R.id.txtdonGia);
         ImageView img = view.findViewById(R.id.imgShoes);
-        Button btnXemChiTiet = view.findViewById(R.id.btnXemChiTiet);
+        ConstraintLayout con1 = view.findViewById(R.id.cons1);
+        ConstraintLayout con2 = view.findViewById(R.id.cons2);
 
-        btnXemChiTiet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clickLisner.newDisplay();
-            }
-        });
+
+
 
 
 
@@ -77,6 +71,7 @@ public class SanPhamAdapter extends BaseAdapter {
         txtTenSP.setText(list.get(i).getTenSanPham());
 //        img.setImageResource(list.get(i).getHinh1());
         Picasso.with(ctx).load(list.get(i).getHinh1()).into(img);
+
 
 
         return view;

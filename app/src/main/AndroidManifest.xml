@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UngDungGiay">
         <activity
-            android:name=".MainActivity"
+            android:name=".DetailProduct"
+            android:exported="false" />
+        <activity
+            android:name=".MainSanPham"
             android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="false" />
-
-
-        //Main
         <activity
-            android:name=".MainSanPham"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.MailTo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainSanPham extends AppCompatActivity {
     FirebaseDatabase test = FirebaseDatabase.getInstance();
@@ -38,15 +40,35 @@ public class MainSanPham extends AppCompatActivity {
 
 
 
-        adt = new SanPhamAdapter(this, R.layout.list_viewsanpham, list, new SanPhamAdapter.IClickLisner() {
-            @Override
-            public void newDisplay() {
-                Intent i = new Intent(MainSanPham.this,Register.class);
-                startActivity(i);
-            }
-        });
+        adt = new SanPhamAdapter(this, R.layout.list_viewsanpham, list) ;
+
         lvShoes.setAdapter(adt);
         getallListSanPham();
+        lvShoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
+
+        lvShoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                SanPham sp = (SanPham) adapterView.getAdapter().getItem(i);
+                Toast.makeText(MainSanPham.this,"aaaaa",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainSanPham.this,DetailProduct.class);
+                intent.putExtra("tenSanPham",list.get(i).getTenSanPham());
+                intent.putExtra("moTa",list.get(i).getMoTa());
+                intent.putExtra("giaTien",list.get(i).getGiaTien());
+                intent.putExtra("hinh1",list.get(i).getHinh1());
+                intent.putExtra("hinh2",list.get(i).getHinh2());
+                intent.putExtra("hinh3",list.get(i).getHinh3());
+                intent.putExtra("hinh4",list.get(i).getHinh4());
+
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -72,4 +94,5 @@ public class MainSanPham extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_san_pham);
+        setContentView(R.layout.activity_main);
 
-//        khaiBao();
-//        openFormRegister();
-//        login();
+        khaiBao();
+        openFormRegister();
+        login();
 
 
 
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(MainActivity.this,"Đăng nhập thành công ",Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(MainActivity.this,MainSanPham.class);
+                            startActivity(i);
                         }else{
                             Toast.makeText(MainActivity.this,"Đăng nhập thất bại",Toast.LENGTH_LONG).show();
                         }
