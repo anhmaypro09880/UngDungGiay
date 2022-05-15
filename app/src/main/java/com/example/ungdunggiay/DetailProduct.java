@@ -16,7 +16,7 @@ public class DetailProduct extends AppCompatActivity {
     TextView tenSanPham,giaTien,moTaa;
     ImageView img1,img2,img3,img4;
     Context ctx;
-    Button btn39,btn40,btn41,btn42,btn43;
+    Button btn39,btn40,btn41,btn42,btn43,btnMuaNgay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,9 +48,19 @@ public class DetailProduct extends AppCompatActivity {
        onClickBtn42();
        onClickBtn43();
        onClickBtn39();
+       btnMuaNgay();
 
 
 
+    }
+
+    private void btnMuaNgay() {
+        btnMuaNgay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void onClickBtn39() {
@@ -137,6 +147,7 @@ public class DetailProduct extends AppCompatActivity {
          btn41 = findViewById(R.id.btn41);
          btn42 = findViewById(R.id.btn42);
          btn43 = findViewById(R.id.btn43);
+         btnMuaNgay = findViewById(R.id.btnMuaNgay);
     }
 
 }
