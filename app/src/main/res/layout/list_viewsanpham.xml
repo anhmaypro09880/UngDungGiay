@@ -38,15 +38,15 @@
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/btnXemChiTiet"
-            app:layout_constraintStart_toStartOf="@+id/btnXemChiTiet"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtdonGia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="70dp"
             android:text="500,000d"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -55,19 +55,16 @@
             app:layout_constraintStart_toStartOf="@+id/txtTenSP"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnXemChiTiet"
-            android:layout_width="139dp"
-            android:layout_height="39dp"
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/list_button"
-            android:text="Xem chi tiết"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="44dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtdonGia"
-            tools:ignore="TouchTargetSizeCheck" />
+            app:srcCompat="@drawable/btnxemchitiet2" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

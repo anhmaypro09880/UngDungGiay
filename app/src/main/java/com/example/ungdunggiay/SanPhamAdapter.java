@@ -27,6 +27,7 @@ public class SanPhamAdapter extends BaseAdapter {
     public interface IClickLisner{
         void newDisplay();
 
+
     }
 
 
@@ -61,7 +62,11 @@ public class SanPhamAdapter extends BaseAdapter {
         ImageView img = view.findViewById(R.id.imgShoes);
         ConstraintLayout con1 = view.findViewById(R.id.cons1);
         ConstraintLayout con2 = view.findViewById(R.id.cons2);
-
+//        Button btn39 = view.findViewById(R.id.btn39);
+//        Button btn40 = view.findViewById(R.id.btn40);
+//        Button btn41 = view.findViewById(R.id.btn41);
+//        Button btn42 = view.findViewById(R.id.btn42);
+//        Button btn43 = view.findViewById(R.id.btn43);
 
 
 

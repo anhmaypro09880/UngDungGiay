@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = edtEmail.getText().toString();
                 String pass = edtPassword.getText().toString();
-                auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                String a= "a@gmail.com";
+                String b= "test123456";
+                auth.signInWithEmailAndPassword(a,b).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){

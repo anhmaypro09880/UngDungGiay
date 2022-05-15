@@ -44,23 +44,18 @@ public class MainSanPham extends AppCompatActivity {
 
         lvShoes.setAdapter(adt);
         getallListSanPham();
-        lvShoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-            }
-        });
 
         lvShoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 SanPham sp = (SanPham) adapterView.getAdapter().getItem(i);
-                Toast.makeText(MainSanPham.this,"aaaaa",Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainSanPham.this,"aaaaa",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainSanPham.this,DetailProduct.class);
                 intent.putExtra("tenSanPham",list.get(i).getTenSanPham());
                 intent.putExtra("moTa",list.get(i).getMoTa());
-                intent.putExtra("giaTien",list.get(i).getGiaTien());
+                intent.putExtra("giaThanh",list.get(i).getGiaTien());
                 intent.putExtra("hinh1",list.get(i).getHinh1());
                 intent.putExtra("hinh2",list.get(i).getHinh2());
                 intent.putExtra("hinh3",list.get(i).getHinh3());
