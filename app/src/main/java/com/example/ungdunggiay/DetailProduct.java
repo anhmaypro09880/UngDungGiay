@@ -13,10 +13,11 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 public class DetailProduct extends AppCompatActivity {
-    TextView tenSanPham,giaTien,moTaa;
-    ImageView img1,img2,img3,img4;
+    TextView tenSanPham,giaTien,moTaa,txtSoLuong;
+    ImageView img1,img2,img3,img4,imgReudece,imgIncrease;
     Context ctx;
     Button btn39,btn40,btn41,btn42,btn43,btnMuaNgay;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +51,37 @@ public class DetailProduct extends AppCompatActivity {
        onClickBtn39();
        btnMuaNgay();
 
+       int a = 1;
+
+        imgIncrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String soLuong = txtSoLuong.getText().toString();
+                int sl = Integer.parseInt(soLuong);
+                int sol = sl+1;
+                txtSoLuong.setText(""+sol);
+            }
+        });
+
+        imgReudece.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String soLuong = txtSoLuong.getText().toString();
+                int sl = Integer.parseInt(soLuong);
+                int sol = sl-1;
+                txtSoLuong.setText(""+sol);
+                if(sol <0){
+                    txtSoLuong.setText("0");
+                }
+            }
+        });
+
+
 
 
     }
+
+
 
     private void btnMuaNgay() {
         btnMuaNgay.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +177,10 @@ public class DetailProduct extends AppCompatActivity {
          btn42 = findViewById(R.id.btn42);
          btn43 = findViewById(R.id.btn43);
          btnMuaNgay = findViewById(R.id.btnMuaNgay);
+         imgIncrease = findViewById(R.id.imgIncrease);
+         imgReudece = findViewById(R.id.imgReduce);
+         txtSoLuong = findViewById(R.id.txtSoLuong);
+
     }
 
 }
