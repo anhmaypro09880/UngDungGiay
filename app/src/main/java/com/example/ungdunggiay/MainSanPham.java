@@ -66,7 +66,6 @@ public class MainSanPham extends AppCompatActivity {
         });
 
     }
-
     private void khaiBao() {
         lvShoes = findViewById(R.id.lvShoes);
         txt = findViewById(R.id.txtSanPham);

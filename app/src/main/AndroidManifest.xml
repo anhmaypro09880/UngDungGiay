@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UngDungGiay">
         <activity
+            android:name=".ActivityThongTinCaNhan"
+            android:exported="false" />
+        <activity
             android:name=".DetailProduct"
             android:exported="false" />
         <activity
